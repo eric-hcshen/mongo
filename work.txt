@@ -1,0 +1,19 @@
+MongoDB docker
+# ¤U¸ü Mongo image
+$ docker pull mongo:latest
+
+# ±Ò°Ê/°õ¦æ MongoDB container
+$ docker run -p 27017:27017 -v -v ~/data:/data/db -d mongo
+$ node mymongo.js
+
+MongoShell
+$mongo
+>show dbs
+>use myproject
+>db.documents.find()
+
+Login to MongoDB docker and shutdown
+$docker exec -it 6df6984d417a bash
+$mongo
+>use admin
+>db.shutdownServer()
